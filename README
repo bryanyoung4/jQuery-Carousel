@@ -1,0 +1,17 @@
+This is my first attempt at a jQuery plugin. It is a simple carousel for images.
+
+Simply create a structure like so...
+
+<div>
+  <ul>
+    <li>
+      <img>
+    </li>
+    <li>
+      <img>
+    </li>
+   ....
+  </ul>
+</div>
+
+and the plugin will do the rest.
