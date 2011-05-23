@@ -28,6 +28,7 @@
 			'title': 'Images',      // title of box
 			'auto': false,          // auto-rotate the images
 			'auto_inc': 15000,      // rate to auto-rotate
+			'mousestop': true,      // stop the carousel when mouse is on carousel
 			'padding': 10,          // pixels between images
 			'paginate': 'paginate', // class to give page button div
 			'listid': 'carousel',   // id on the div containing the ul element
@@ -41,7 +42,7 @@
 		return this.each(function() {
 
 			var topdiv = $(this);
-
+			var interval;
 			var list = $('ul:first', topdiv);
 			var liwidth = (o.width + o.padding);
 			var lilength = $('li', list).length;
@@ -136,7 +137,10 @@
 			}
 
 			if (o.auto) {
-				setInterval(function() {$('button#'+o.next).click();}, o.auto_inc);
+				interval = setInterval(function() {$('button#'+o.next).click();}, o.auto_inc);
+				if (o.mousestop) {
+					list.hover(function() { clearInterval(interval); console.log(interval); }, function() { interval = setInterval(function() {$('button#'+o.next).click();}, o.auto_inc); });
+				}
 			}
  
 		});

@@ -15,3 +15,30 @@ Simply create a structure like so...
 </div>
 
 and the plugin will do the rest.
+
+OPTIONS
+
+groupby: images to show at once
+time: duration of animation
+
+height: height of images
+width: width of images
+padding: space between images
+
+loop: loop around when the edge is reached
+
+title: title to add to the div
+
+auto: auto-rotate the images
+auto_inc: rate to auto-rotate in ms
+mousestop: stop the carousel on mouseover
+
+paginate: class on the page button div
+listid: id on the div containing the list
+activeid: id on the active button
+next: id on 'next' button
+prev: id on 'prev' button
+
+nextimg: image for 'next' button
+previmg: image for 'prev' button
+
